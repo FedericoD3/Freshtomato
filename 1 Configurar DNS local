@@ -10,8 +10,8 @@ En la interfaz web de freshtomato:
 Definir las equivalencias FQDN - IP en el archivo hosts
 3- Conectarse desde la computadora vía ssh root@IPdelRouter (no sirve por la interfaz web) y ejecutar:
    nano /etc/hosts
-   y agregar las equivalencias una en cada linea en la forma:
-   192.168.xxx.zzz  NombreEquipo.familia.red
+   y agregar las equivalencias un IP en cada linea en la forma (pero puede tener mas de un FQDN):
+   192.168.xxx.zzz  NombreEquipo.familia.red OtroNombre.familia.red 
 4- Salvar el archivo con ctrl+s ctrl+x y recargar el DNSMASQ ejecutando:
    service dnsmasq restart
 5- En otro equipo (que use el router como DNS) probar ejecutanto
