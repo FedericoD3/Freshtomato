@@ -1,0 +1,14 @@
+Es necesario resolver equipos locales como comosellame.familia.red además de hosts en internet.
+O se usa un DNS en otro lado (p.e. un PiHole) o el DNSMASQ de Freshtomato. 
+Si el router es de buen nivel, se puede tener todo en el mismo aparato:
+
+En la interfaz web de freshtomato:
+1- Advanced > DHCP/DNS/TFTP > marcar "Use internal DNS"
+2- Advanced > DHCP/DNS/TFTP > Dnsmasq Custom Configuration > agregar local=/familia.red/ (o como se llamen el dominio).
+   Con esto, consultas DNS del dominio especificado no se enviarán a Google o Cloudflare sino que se resolverán en /etc/hosts
+
+Definir las equivalencias FQDN - IP en el archivo hosts
+3- Conectarse desde la computadora vía ssh root@IPdelRouter (no sirve por la interfaz web) y ejecutar:
+   nano /etc/hosts
+   y agregar las equivalencias una en cada linea en la forma:
+   192.168.xxx.zzz  NombreEquipo.familia.red
