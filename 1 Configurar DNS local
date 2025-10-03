@@ -12,3 +12,10 @@ Definir las equivalencias FQDN - IP en el archivo hosts
    nano /etc/hosts
    y agregar las equivalencias una en cada linea en la forma:
    192.168.xxx.zzz  NombreEquipo.familia.red
+4- Salvar el archivo con ctrl+s ctrl+x y recargar el DNSMASQ ejecutando:
+   service dnsmasq restart
+5- En otro equipo (que use el router como DNS) probar ejecutanto
+   nslookup NombreEquipo.familia.red
+   o
+   dig NombreEquipo.familia.red
+   y debe devolver información del DNS incluyendo el IP que se le asignó como equivalencia
