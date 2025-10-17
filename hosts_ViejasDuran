@@ -1,0 +1,5 @@
+127.0.0.1 localhost
+10.12.0.250 dfap-cocina.vd.red dftv.vd.red logs.vd.red qbt.vd.red
+
+::1 localhost ip6-localhost ip6-loopback
+2803:c000:11:3af7::1 DFAP-cocina
