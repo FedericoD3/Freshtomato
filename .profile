@@ -37,8 +37,6 @@ alias ip6tl='(
   clear
   echo -e "\033[0;30;42m### FILTER ###\033[0m"
   ip6tables -L -n -v --line-numbers -t filter | sed "/^$/d" | sed "s/^\([0-9]\)/ \1/"  | sed "s/^num/ num/" | sed "s/Chain/CHAIN/"
-  echo -e "\033[0;30;42m### NAT ###\033[0m"
-  ip6tables -L -n -v --line-numbers -t nat    | sed "/^$/d" | sed "s/^\([0-9]\)/ \1/"  | sed "s/^num/ num/" | sed "s/Chain/CHAIN/"
   echo -e "\033[0;30;42m### MANGLE ###\033[0m"
   ip6tables -L -n -v --line-numbers -t mangle | sed "/^$/d" | sed "s/^\([0-9]\)/ \1/"  | sed "s/^num/ num/" | sed "s/Chain/CHAIN/"
 )'
@@ -47,8 +45,6 @@ alias ip6tx='(
   clear
   echo -e "\033[0;30;42m### FILTER ###\033[0m"
   ip6tables -S -t filter
-  echo -e "\033[0;30;42m### NAT ###\033[0m"
-  ip6tables -S -t nat
   echo -e "\033[0;30;42m### MANGLE ###\033[0m"
   ip6tables -S -t mangle
 )'
