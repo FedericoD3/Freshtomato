@@ -13,6 +13,9 @@ alias hostse='nano /etc/hosts'
 alias puertos='netstat -tulpn | grep LISTEN '
 alias sudo=' '
 
+alias nginxe='nano /etc/nginx/nginx.conf && nginx -t && service nginx restart'
+alias hostse='nano /etc/hosts && service dnsmasq restart'
+
 alias iptl='(
   clear
   echo -e "\033[0;30;42m### FILTER ###\033[0m"
