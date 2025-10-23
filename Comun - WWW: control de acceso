@@ -1,0 +1,13 @@
+# Control básico:
+
+# Instalar el generador de usuario-clave
+  sudo apt update && sudo apt install apache2-utils 
+# o usar un generador online como https://codeshack.io/htpasswd-generator/
+
+# Crear el primer usuario:
+  htpasswd -c /algun/directorio/determinado/.htpasswd NombreUsuario
+  # pedirá la clave y repetirla
+# Crear otros  usuarios: 
+  htpasswd    /algun/directorio/determinado/.htpasswd OtroUsuario
+# Eliminar usuarios:
+  htpasswd -D /algun/directorio/determinado/.htpasswd NombreUsuario

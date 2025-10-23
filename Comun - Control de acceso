@@ -1,4 +1,0 @@
-# Control básico:
-
-# Generar los usuarios y claves:
-  sudo apt update && sudo apt install apache2-utils 
