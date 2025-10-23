@@ -18,3 +18,6 @@
       ssl_certificate     /algun/dir/determinado/nginx-selfsigned.crt;
       ssl_certificate_key /algun/dir/determinado/nginx-selfsigned.key;
       location = ...
+
+# Reiniciar el webserver:
+  service nginx restart
