@@ -1,0 +1,7 @@
+# El certificado autofirmado es inseguro porque equivale a decir uno mismo "sí soy yo" en lugar de que lo haga un ente autorizado
+#  por lo tanto el navegador se queja, aunque la trasmisión si vaya encriptada.
+# Entes como Let's Encrypt son muy complicados sin tener dominio propio real (en lugar de xxx.duckdns.org o zzz.noip.net)
+#  y además muchos no están disponibles para Venezuela
+
+# Crear la llave privada y la llave pública, y guardarlos en un directorio determinado:
+
