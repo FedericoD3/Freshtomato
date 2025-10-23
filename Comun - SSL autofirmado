@@ -6,7 +6,7 @@
 # Crear la llave privada y la llave pública, y guardarlos en un directorio determinado, accesible a nginx:
   sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /algun/dir/determinado/nginx-selfsigned.key -out /algun/dir/determinado/nginx-selfsigned.crt
 
-# Agregar SSL a la configuración del website en nginx:
+# Agregar SSL y las llaves de encriptación a la configuración del website en nginx:
     server {
       listen 80;                    # (o el puerto que sea que tengas configurado, 80 es el standard)
       server_name algo.dominio.com;
@@ -18,15 +18,3 @@
       ssl_certificate     /algun/dir/determinado/nginx-selfsigned.crt;
       ssl_certificate_key /algun/dir/determinado/nginx-selfsigned.key;
       location = ...
-
-
-
-# Agregar las llaves de encriptación a la configuración del website en nginx:
-    location = / {
-    root / ... o proxy_pass ...
-  # se convierte en
-    location = / {
- 
-    root / ... o proxy_pass ...
-
-      
