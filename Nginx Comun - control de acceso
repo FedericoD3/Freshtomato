@@ -5,9 +5,18 @@
 # o usar un generador online como https://codeshack.io/htpasswd-generator/
 
 # Crear el primer usuario:
-  htpasswd -c /algun/directorio/determinado/.htpasswd NombreUsuario
+  htpasswd -c /algun/directorio/accesible/.htpasswd NombreUsuario
   # pedirá la clave y repetirla
 # Crear otros  usuarios: 
-  htpasswd    /algun/directorio/determinado/.htpasswd OtroUsuario
+  htpasswd    /algun/directorio/accesible/.htpasswd OtroUsuario
 # Eliminar usuarios:
-  htpasswd -D /algun/directorio/determinado/.htpasswd NombreUsuario
+  htpasswd -D /algun/directorio/accesible/.htpasswd NombreUsuario
+
+# Modificar la configuración de nginx, 
+# agregar debajo de cada "location ..."
+    location = / {
+      auth_basic "Restricted Access";
+      auth_basic_user_file /algun/directorio/accesible/.htpasswd;
+
+# Reiniciar el webserver:
+  service nginx restart
